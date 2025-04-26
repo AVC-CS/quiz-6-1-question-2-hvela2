@@ -4,12 +4,12 @@
 #include <iomanip>
 using namespace std;
 
-int writeFile()
+int writeFile(const string& filename)
 {
 ofstream outFile("employee.txt");
 int numEmployees, id;
 string name, department;
-double salary;
+double salary, total = 0;
 
 cout << "Number of employees: ";
 cin >> numEmployees;
@@ -25,10 +25,10 @@ outFile.close();
 return numEmployees;
 }
 
-int readFile(){
+int readFile(const string& filename){
     ifstream inFile("employee.txt");
     int numEmployees, id;
-    string name, department
+    string name, department;
     double salary, total = 0;
 
     inFile >> numEmployees;
